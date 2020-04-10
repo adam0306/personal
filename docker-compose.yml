@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  emby:
+    image: emby/embyserver:latest
+    container_name: emby
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+    volumes:
+      - /data/Sync/docker/emby:/config
+      - /data/Media/Plex/Shows:/tv
+      - /data/Media/Plex/Movies:/movies
+    ports:
+      - 90:8096
+    restart: unless-stopped

@@ -1,11 +1,50 @@
-docker run -d \
-    --volume /path/to/programdata:/config \ # This is mandatory
-    --volume /path/to/share1:/mnt/share1 \ # To mount a first share
-    --volume /path/to/share2:/mnt/share2 \ # To mount a second share
-    --device /dev/dri/renderD128 \ # To mount a render node for VAAPI
-    --publish 8096:8096 \ # To expose the HTTP port
-    --publish 8920:8920 \ # To expose the HTTPS port
-    --env UID=1000 \ # The UID to run emby as (default: 2)
-    --env GID=100 \ # The GID to run emby as (default 2)
-    --env GIDLIST=100 \ # A comma-separated list of additional GIDs to run emby as (default: 2)
-    emby/embyserver:latest
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'gitlab.example.com'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'https://gitlab.example.com'
+      # Add any other gitlab.rb configuration here, each on its own line
+  ports:
+    - '80:80'
+    - '443:443'
+    - '22:22'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
+
+
+
+
+version: "3.6"
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    ports:
+      - "22:22"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /srv/gitlab/data:/var/opt/gitlab
+      - /srv/gitlab/logs:/var/log/gitlab
+      - /srv/gitlab/config:/etc/gitlab
+    environment:
+      GITLAB_OMNIBUS_CONFIG: "from_file('/omnibus_config.rb')"
+    configs:
+      - source: gitlab
+        target: /omnibus_config.rb
+    secrets:
+      - gitlab_root_password
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    deploy:
+      mode: replicated
+      replicas: 4
+configs:
+  gitlab:
+    file: ./gitlab.rb
+secrets:
+  gitlab_root_password:
+    file: ./root_password.txt

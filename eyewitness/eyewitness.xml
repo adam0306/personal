@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Apr 24 08:54:59 2020 as: nmap -v -Pn -p 80,443,8080,8000,8443,9443 -n -T4 -open -oX eyewitness.xml 10.10.10.2 -->
+<nmaprun scanner="nmap" args="nmap -v -Pn -p 80,443,8080,8000,8443,9443 -n -T4 -open -oX eyewitness.xml 10.10.10.2" start="1587736499" startstr="Fri Apr 24 08:54:59 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="6" services="80,443,8000,8080,8443,9443"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1587736499"/>
+<taskend task="ARP Ping Scan" time="1587736499" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1587736499"/>
+<taskend task="SYN Stealth Scan" time="1587736499" extrainfo="6 total ports"/>
+<host starttime="1587736499" endtime="1587736499"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.10.10.2" addrtype="ipv4"/>
+<address addr="F0:9F:C2:1C:12:11" addrtype="mac" vendor="Ubiquiti Networks"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="2">
+<extrareasons reason="resets" count="2"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="344" rttvar="1110" to="100000"/>
+</host>
+<runstats><finished time="1587736499" timestr="Fri Apr 24 08:54:59 2020" elapsed="0.30" summary="Nmap done at Fri Apr 24 08:54:59 2020; 1 IP address (1 host up) scanned in 0.30 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

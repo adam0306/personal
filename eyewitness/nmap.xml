@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Aug 10 12:21:30 2020 as: nmap -v -Pn -p 80,443,8080,8000,8443,9443 -n -&#45;open -oX nmap.xml 172.217.164.78 -->
+<nmaprun scanner="nmap" args="nmap -v -Pn -p 80,443,8080,8000,8443,9443 -n -&#45;open -oX nmap.xml 172.217.164.78" start="1597080090" startstr="Mon Aug 10 12:21:30 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="6" services="80,443,8000,8080,8443,9443"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1597080090"/>
+<taskend task="SYN Stealth Scan" time="1597080091" extrainfo="6 total ports"/>
+<host starttime="1597080090" endtime="1597080091"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.217.164.78" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="4">
+<extrareasons reason="no-responses" count="4"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="119"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="119"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="24363" rttvar="19601" to="102767"/>
+</host>
+<runstats><finished time="1597080091" timestr="Mon Aug 10 12:21:31 2020" elapsed="1.34" summary="Nmap done at Mon Aug 10 12:21:31 2020; 1 IP address (1 host up) scanned in 1.34 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

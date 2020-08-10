@@ -1,11 +1,11 @@
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive 
-#ENV TZ=Europe/Minsk
-#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV TZ=America/Chicago
 RUN apt-get update && apt-get install -y git wget phantomjs && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git
 WORKDIR /EyeWitness/Python/setup
 RUN ./setup.sh
 RUN mkdir /tmp/EyeWitness
-WORKDIR /tmp/EyeWitness/
-ENTRYPOINT ["python3", "/EyeWitness/Python/EyeWitness.py", "--no-prompt"]
+WORKDIR /EyeWitness/Python
+COPY nmap.xml /EyeWitness/Python/
+ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "-x", "nmap.xml"]

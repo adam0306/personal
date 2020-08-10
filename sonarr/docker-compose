@@ -1,14 +1,6 @@
 version: '3'
 
 services:
-    eyewitness:
-    
-
-
-
-version: '3'
-
-services:
   sonarr:
     image: linuxserver/sonarr:latest
     container_name: sonarr

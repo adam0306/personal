@@ -1,0 +1,6 @@
+# docker run --runtime=nvidia -ti cryptolovi/hashcat-docker /bin/bash
+FROM ubuntu
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates
+WORKDIR /home/hashcat
+RUN git clone https://github.com/hashcat/hashcat.git . && git submodule update --init && make install
+hashcat -a 0 -m 1000 -o cracked.txt hashes.txt rockyou.txt

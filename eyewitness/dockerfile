@@ -16,5 +16,5 @@ WORKDIR /EyeWitness/Python/setup
 RUN ./setup.sh
 RUN mkdir /tmp/EyeWitness
 WORKDIR /EyeWitness/Python
-COPY nmap.xml /EyeWitness/Python/
-ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "--no-prompt", "-x", "nmap.xml"]
+VOLUME /nmap
+#ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "--no-prompt", "-x", "nmap.xml"]

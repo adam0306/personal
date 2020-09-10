@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ=America/Chicago
+VOLUME /nmap
 RUN apt-get update && apt-get install -y git nmap && rm -rf /var/lib/apt/lists/*
-
-#docker run 8a nmap -v -Pn -p 80,443,8080,8000,8443,9443 -n -T4 74.125.21.139 --open -oX nmap.xml
+ENTRYPOINT ["nmap", "-v", "-Pn", "-p","80,443,8080,8000,8443,9443","-n", "-iL", "network.txt", "--open","-oX","nmap.xml"]

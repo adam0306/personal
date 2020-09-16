@@ -1,6 +1,7 @@
 FROM ubuntu:latest
-ENV DEBIAN_FRONTEND=noninteractive 
+ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=America/Chicago
 VOLUME /nmap
 RUN apt-get update && apt-get install -y git nmap && rm -rf /var/lib/apt/lists/*
-ENTRYPOINT ["nmap", "-v", "-Pn", "-p","80,443,8080,8000,8443,9443","-n", "-iL", "network.txt", "--open","-oX","nmap.xml"]
+WORKDIR /nmap
+ENTRYPOINT ["nmap", "-v", "-Pn", "-p","80,443,8080,8000,8443,9443","-n", "-iL", "/nmap/network.txt", "--open","-oX","/nmap/nmap.xml"]

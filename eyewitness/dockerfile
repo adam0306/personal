@@ -1,14 +1,5 @@
-# Prerequisites
-# > Using the NMAP utility scan the desired targets and target ports with output to nmap.xml.
-# > The nmap.xml file must be housed within the same diretory as the dockerfile for COPY to work.
- 
-# Requirements
-# > docker run %imageid%
-# > Once the container exits the scan data will be saved within the /EyeWitness/Python/ directory.
-# > To get this scan data off of the container run "docker cp %containerid%:/EyeWitness/Python/ %destinationdiretory%"
-
 FROM ubuntu:latest
-ENV DEBIAN_FRONTEND=noninteractive 
+ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=America/Chicago
 RUN apt-get update && apt-get install -y git wget phantomjs && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git
@@ -17,4 +8,4 @@ RUN ./setup.sh
 RUN mkdir /tmp/EyeWitness
 WORKDIR /EyeWitness/Python
 VOLUME /nmap
-#ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "--no-prompt", "-x", "nmap.xml"]
+#ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "--no-prompt", "-x", "/nmap/nmap.xml"]

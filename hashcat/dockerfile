@@ -1,9 +1,12 @@
 FROM ubuntu:latest
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates \
-&& git clone https://github.com/hashcat/hashcat.git . \
-&& git submodule update --init \
+VOLUME /hashcat
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates wget \
+&& git clone https://github.com/hashcat/hashcat.git
+WORKDIR ./hashcat
+RUN git submodule update --init \
 && make install \
 wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2 \
-&& bzip2 -d rockyou.txt.bz2
-VOLUME /hashcat
-#RUN ./hashcat -a 0 -m 1000 ./hashcat/hashes.txt ./hashcat/rockyou.txt -o ./hashcat/cracked.txt
+&& bzip2 -d rockyou.txt.bz2 \
+&& curl hashes.txt
+#RUN ./hashcat -a 0 -m 1000 ./hashcat/hashes.txt ./hashcat/rockyou.txt -o ./hashcat/cracked.txt -r --force
+#hashcat -a 0 -m 400 example400.hash ../rockyou.txt -r /hashcat/rules/dive.rule -o cracked.txt

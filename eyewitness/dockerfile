@@ -1,11 +1,18 @@
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=America/Chicago
-RUN apt-get update && apt-get install -y git wget phantomjs && rm -rf /var/lib/apt/lists/*
-RUN git clone https://github.com/FortyNorthSecurity/EyeWitness.git
+RUN apt-get update && apt-get install -y git wget phantomjs && rm -rf /var/lib/apt/lists/* \
+&& git clone https://github.com/FortyNorthSecurity/EyeWitness.git \
+&& mkdir /tmp/EyeWitness
 WORKDIR /EyeWitness/Python/setup
 RUN ./setup.sh
-RUN mkdir /tmp/EyeWitness
 WORKDIR /EyeWitness/Python
 VOLUME /nmap
-#ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "--no-prompt", "-x", "/nmap/nmap.xml"]
+ENTRYPOINT ["/usr/bin/python3", "EyeWitness.py", "--no-prompt", "-x", "/nmap/nmap.xml"]
+
+#// TODO: Combine NMAP and EyeWitness containers.
+#
+# for each ip/subnet
+## import ip/subnet list to scan with NMAP
+## import xml file to scan with EyeWitness
+## output report to VOLUME

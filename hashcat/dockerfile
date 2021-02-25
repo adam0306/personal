@@ -1,12 +1,24 @@
 FROM ubuntu:latest
 VOLUME /hashcat
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates wget \
-&& git clone https://github.com/hashcat/hashcat.git
+ENV TZ=America/Chicago
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y alien clinfo
+ENV INTEL_OPENCL_URL=http://registrationcenter-download.intel.com/akdlm/irc_nas/9019/opencl_runtime_16.1.1_x64_ubuntu_6.4.0.25.tgz
+RUN mkdir -p /tmp/opencl-driver-intel
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential git ca-certificates wget alien clinfo \
+&& mkdir -p /tmp/opencl-driver-intel
+WORKDIR /tmp/opencl-driver-intel
+RUN curl -O $INTEL_OPENCL_URL; \
+    tar -xzf $(basename $INTEL_OPENCL_URL); \
+    for i in $(basename $INTEL_OPENCL_URL .tgz)/rpm/*.rpm; do alien --to-deb $i; done; \
+    dpkg -i *.deb; \
+    mkdir -p /etc/OpenCL/vendors; \
+    echo /opt/intel/*/lib64/libintelocl.so > /etc/OpenCL/vendors/intel.icd; \
+    rm -rf *
+WORKDIR /root
+RUN git clone https://github.com/hashcat/hashcat.git
 WORKDIR ./hashcat
 RUN git submodule update --init \
-&& make install \
-wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2 \
-&& bzip2 -d rockyou.txt.bz2 \
-&& curl hashes.txt
+&& make install
 #RUN ./hashcat -a 0 -m 1000 ./hashcat/hashes.txt ./hashcat/rockyou.txt -o ./hashcat/cracked.txt -r --force
 #hashcat -a 0 -m 400 example400.hash ../rockyou.txt -r /hashcat/rules/dive.rule -o cracked.txt

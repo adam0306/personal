@@ -1,0 +1,10 @@
+---
+- name: Windows Service Restarts
+  hosts: all
+  gather_facts: no
+  tasks:
+
+    - name: CyberArk Provider Restart
+      win_service:
+        name: CyberArk Application Password Provider
+        state: restarted

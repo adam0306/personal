@@ -1,0 +1,13 @@
+---
+- name: Update sshd config on PSMP
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Update sshd_config with owner and permissions
+      copy:
+        src: ./sshd_config
+        dest: /etc/ssh/sshd_config
+        owner: root
+        group: root
+        mode: '0660'

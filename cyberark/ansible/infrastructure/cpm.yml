@@ -1,0 +1,43 @@
+---
+- name: CPM Component Status
+  hosts: all
+  gather_facts: no
+  tasks:
+
+    - name: Verify Platform Service is Running
+      ansible.windows.win_service_info:
+        name: CyberArk Central Policy Manager Scanner
+      register: service_info
+
+    - name: Verify CPM Service is Running
+      ansible.windows.win_service_info:
+        name: CyberArk Password Manager
+      register: service_info
+
+    # - name: Restart a service
+    #   win_service:
+    #     name: spooler
+    #   state: restarted
+    #
+    # - name: CPU usage
+    #   win_command: wmic cpu get loadpercentage
+    #   register: cpu_results
+    #
+    # - name: Memory
+    #   win_command: wmic OS get FreePhysicalMemory /Value
+    #   register: mem_results
+    #
+    # - name: Convert first system disk into various formats
+    #   debug:
+    #     msg: '{{ disksize_gib }} vs {{ disksize_gib_human }}'
+    #   vars:
+    #     # Get first system disk
+    #     disk: '{{ ansible_facts.disks|selectattr("system_disk")|first }}'
+    #
+    #     # Show disk size in Gibibytes
+    #     disksize_gib_human: '{{ disk.size|filesizeformat(True) }}'   # returns "223.6 GiB" (human readable)
+    #     disksize_gib: '{{ (disk.size/1024|pow(3))|round|int }} GiB'  # returns "224 GiB" (value in GiB)
+    #
+    #     # Show disk size in Gigabytes
+    #     disksize_gb_human: '{{ disk.size|filesizeformat }}'        # returns "240.1 GB" (human readable)
+    #     disksize_gb: '{{ (disk.size/1000|pow(3))|round|int }} GB'  # returns "240 GB" (value in GB)

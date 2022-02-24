@@ -1,0 +1,10 @@
+---
+- name: Disable Windows Server Manager on Login
+  hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: Run an executable and send data to the stdin for the executable
+    win_command: powershell.exe -
+    args:
+      stdin: Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask -Verbose

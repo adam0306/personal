@@ -1,0 +1,15 @@
+---
+- name: Production Windows Server AAM Agent Install
+  hosts: all
+  gather_facts: no
+  tasks:
+
+    - name: Copy Installation Media
+      win_copy:
+        src: /media
+        dest: C:\~
+        remote_dst: yes
+  
+    - win_shell: '.\setup.exe /s /f1"C:\~\silent.iss" "C:\~\cred file"'
+      args:
+        chdir: C:\

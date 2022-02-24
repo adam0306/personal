@@ -1,0 +1,20 @@
+---
+- name: Get Disk Sizes
+  hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: Get Disk Facts
+    win_disk_facts:
+
+  - name: Output first disk size
+    debug:
+      var: ansible_facts.disks[0].size
+
+  - name: Convert first system disk into various formats
+    debug:
+      msg: '{{ disksize_gib }}'
+
+    vars:
+      disk: '{{ ansible_facts.disks|selectattr("system_disk")|first }}'
+      disksize_gib: '{{ (disk.size/1024|pow(3))|round|int }} GiB'

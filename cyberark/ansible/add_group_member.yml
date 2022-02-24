@@ -1,0 +1,11 @@
+---
+- name: Adds AD user to AD group
+  hosts: all
+  tasks:
+
+    - name: Add AD user to AD group
+      win_domain_group_membership:
+        name: "{{ group }}"
+        members:
+          - "{{ user }}"
+        state: present

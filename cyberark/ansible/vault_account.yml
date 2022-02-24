@@ -1,0 +1,23 @@
+---
+- name: CyberArk Vault Account
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Creating an Account using the PAS WebServices SDK
+      cyberark.pas.cyberark_account:
+        logging_level: DEBUG
+        identified_by: "address,username"
+        safe: "{{ safe }}"
+        address: "{{ address }}"
+        username: "{{ username }}"
+        platform_id: "{{ platform }}"
+        secret: "@N&Ibl3!"
+        platform_account_properties:
+            LogonDomain: "CORP"
+            OwnerName: "ansible_user"
+        secret_management:
+            automatic_management_enabled: true
+       state: present
+        cyberark_session: "{{ cyberark_session }}"
+      register: cyberarkaction

@@ -1,0 +1,5 @@
+---
+- name: Create CyberArk Safe
+  hosts: all
+  gather_facts: no
+  tasks:

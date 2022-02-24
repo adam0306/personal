@@ -1,0 +1,41 @@
+---
+- name: Install CyberArk AIM agent, Test RedHat
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+
+    - name: check for redhat-lsb and chkconfig installs
+      yum:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+          - chkconfig
+          - redhat-lsb
+
+    - name: create new directory /var/opt/aim
+      file:
+        path: /var/opt/aim
+        state: directory
+
+    - name: copy and unpack files to /var/opt/aim
+      unarchive:
+        src: /media
+        dest: /var/opt/aim
+        owner: owner
+        mode: '0777'
+        remote_src: no
+
+    - name: copy aimparms to /var/tmp/
+      copy:
+        src: /var/opt/aim/aimparms
+        dest: /var/tmp/
+        remote_src: yes
+
+    - name: install aim
+      yum:
+        name: /var/opt/aim/CARKaim-11.02.0.22.x86_64.rpm
+        state: present
+
+#TODO: add logic to verify agent is uninstalled

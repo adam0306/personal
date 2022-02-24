@@ -1,0 +1,22 @@
+---
+- name: uninstall CyberArk AIM
+  hosts: all
+  tags:
+    - aim
+
+  gather_facts: no
+  tasks:
+    - name: uninstall AIM
+      yum:
+        name: CARKaim
+        state: absent
+
+    - name: delete /var/opt/aim
+      file:
+        path: /var/opt/aim
+        state: absent
+
+    - name: delete /etc/opt/CARKaim
+      file:
+        path: /etc/opt/CARKaim
+        state: absent

@@ -1,0 +1,46 @@
+---
+- name: linux_patching
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+
+    - block:
+        - name: Patching
+          yum:
+            name: "*"
+            update_cache: yes
+            state: latest
+            exclude: kernel*
+            security: yes
+            lock_timeout: 180
+
+      rescue:
+        - name: create backup dir
+          file:
+            path: /var/lib/rpm/backup
+            state: directory
+   
+        - name: copy files to backup dir
+          shell: cp -a /var/lib/rpm/__db* /var/lib/rpm/backup/ 
+
+        - name: delete old
+          shell: rm -f /var/lib/rpm/__db.[0-9][0-9]*
+
+        - name: rpm query all
+          shell: rpm --quiet -qa
+
+        - name: fix DB
+          shell: rpm --rebuilddb
+
+        - name: yum clean all
+          shell: yum clean all
+
+        - name: update security
+          yum:
+            name: "*"
+            update_cache: yes
+            state: latest
+            exclude: kernel*
+            security: yes
+            lock_timeout: 180

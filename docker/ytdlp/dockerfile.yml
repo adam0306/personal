@@ -1,7 +1,4 @@
 FROM alpine:latest
-apk update && apk upgrade
-apk add python3 py3-pip wget curl ffmpeg
-curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-chmod a+rx /usr/local/bin/yt-dlp
-yt-dlp --format "bv*+ba/b" ./requirements.txt
+CMD ["apk update && apk upgrade", "apk add python3 py3-pip wget curl ffmpeg", "curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp", "chmod a+rx /usr/local/bin/yt-dlp"]
+#yt-dlp --format "bv*+ba/b" ./requirements.txt
 

@@ -6,13 +6,6 @@ channelId
 mySubscribers = $true
 
 
-
-
-
-
-
-
-
 # -*- coding: utf-8 -*-
 
 # Sample Python code for youtube.subscriptions.list

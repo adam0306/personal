@@ -1,3 +1,8 @@
+<!-- 
+Update Skills section
+Update Win section
+Update Failure section
+-->
 # Presentation Conundrum
 
 - Markdown
@@ -9,38 +14,61 @@
 - Standard Boiler Plate PowerPoint
     - The driest, cookie cutter method but C level like them.
 
-# whoami
-
-* Husband
-* Father
-* Lover of the outdoors
-* Aspiring security flunky
-* Jack of all trades
-* Into all things secrets and U2F :heart: Yubico :heart:
+<!-- 
+5. Describe your experience implementing new solutions/ collaborating with other teams /lifecycle
+management/ system support/ etc...
+ -->
 
 # Background
 ### Education
 
-##### Degree
+* Obtained an Associates of Applied Science in Information Technology from ITT Technical Institue
 
-##### Certifications
 ![alt text](./security.png)
 
-### Experience
+### Experience (Chronologically)
+
+* General Dynamics Information Technology
+    * Systems Administrator for two office locations
+    * It was a general understanding that if the item had wires within it, I worked on it
+    * VMware Virtualization, Linux Administration (RedHat and Ubuntu), Network Administration, Facilities Management, and Asset Management
+* Lockheed Martin
+    * I had the opportunity to work on fighter jets while living at the beach. Enough said
+* SouthernLinc Wireless
+    * Work with teams across the organization in implementation, knowledge transfer, and support of security tools
+    * Member of Windows/Linux/VMware admin team supporting the LTE project
+* Warren Averett
+    * Assigned a group of clients to support and build relationships with
+    * Help design 
+    * Implementation of Firewalls and network devices
+    * Mentor junior colleagues 
+* Blue Cross & Blue Shield of Alabama
+    * Lead CyberArk Vault Admin
+    * Educate other teams on automation tools and techniques utilizing CyberArk
+    * Serve as a problem solver to devise solutions to problems within the organization
 
 ### Skills
 
 * VMware
 * CyberArk
 * Linux
+* Active Directory
+* Backups (Veeam NetBackup)
 * Palo Alto Firewalls
 * Ubiquiti
 * Lancope/Stealthwatch
-* Vuln management
+* Vuln management (McAfee/Intel Foundstone)
 * Constant networking
 * Sys Admin
 * Windows
 * Rewriting PSM Monitor tool from Python using Docker into Golang https://github.com/adam0306/PSM-Monitor
+* PowerShell/PowerCLI
+* Virtualization
+* Storage
+* Security Tool Implementation
+* RestAPI
+* Ansible Tower
+
 
 ### You Have Failed
 
@@ -89,6 +117,3 @@ Charlie Sheen
 |----------|-----------------|------------------|
 | Spanish  | In Progress     |    Elementary    |
 | Persian  | In Progress     |  No Proficiency  |
-
-<!-- 5. Describe your experience implementing new solutions/ collaborating with other teams /lifecycle
-management/ system support/ etc...

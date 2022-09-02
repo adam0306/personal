@@ -9,13 +9,13 @@
 
 
 # Background
-## Education
+### Education
 
-## Experience
+### Experience
 
-## Skills
+### Skills
 
-## You Have Failed
+### You Have Failed
 
 ![alt text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.gfycat.com%2FUnpleasantWaterloggedHydra-mobile.jpg&f=1&nofb=1)
 
@@ -42,7 +42,8 @@ https://malicious.life/wp-content/uploads/2022/04/Apple-profile-400x400_.jpg
 https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe
 https://thecyberwire.com/images/cover-art/daily-podcast-cover-art-cw-368.jpg
 
-
+https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw
+https://elroy.twit.tv/sites/default/files/styles/twit_album_art_600x600/public/images/shows/security_now/album_art/sn2022_albumart_standard_2048.jpg?itok=7NzFowe1
 
 ## News
 

@@ -32,12 +32,9 @@
 * [Security Week](https://www.securityweek.com/ "Security Week")
 * [Bleeping Computer](https://www.bleepingcomputer.com/ "Bleeping Computer")
 
+### Podcasts
 
-
-#### Reading
-#### Podcasts
-
-[![Image name](https://media1.popsugar-assets.com/files/thumbor/6QuHJxTvZVaIohb6eycUg9wfRWw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/10/20/766/n/47856405/99d3b8d29bfe0351_Darknet_Diaries/i/Darknet-Diaries.jpg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5)
+[![Image name](https://media1.popsugar-assets.com/files/thumbor/6QuHJxTvZVaIohb6eycUg9wfRWw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/10/20/766/n/47856405/99d3b8d29bfe0351_Darknet_Diaries/i/Darknet-Diaries.jpg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5){height=400px width=500px}
 
 [![Image name](https://malicious.life/wp-content/uploads/2022/04/Apple-profile-400x400_.jpg)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q)
 

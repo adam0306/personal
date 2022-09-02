@@ -24,7 +24,7 @@
 ##### Degree
 
 ##### Certifications
-![alt text](https://www.bluejade.solutions/wp-content/uploads/2021/01/CompTIA-Security.png)
+![alt text](./security.png)
 
 ### Experience
 
@@ -42,7 +42,6 @@
 * Windows
 * Rewriting PSM Monitor tool from Python using Docker into Golang https://github.com/adam0306/PSM-Monitor
 
-
 ### You Have Failed
 
 Port Channel
@@ -53,9 +52,7 @@ Port Channel
 
 VMware Introduction?
 
-
 Charlie Sheen
-
 
 ![alt text](https://media3.giphy.com/media/3ohryhNgUwwZyxgktq/giphy.gif?cid=790b761199f09f01623c83c3a6c9363d6773e8dc0c0c7d0c&rid=giphy.gif&ct=g)
 # Staying Current
@@ -93,7 +90,5 @@ Charlie Sheen
 | Spanish  | In Progress     |    Elementary    |
 | Persian  | In Progress     |  No Proficiency  |
 
-
 <!-- 5. Describe your experience implementing new solutions/ collaborating with other teams /lifecycle
 management/ system support/ etc...
-

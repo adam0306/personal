@@ -46,7 +46,7 @@
 
 Port Channel
 
-![alt text](https://media.tenor.co/images/207724a6172637619e68d47771b6e2f1/raw)
+![alt text](./everything.gif)
 
 ### When you win
 
@@ -54,7 +54,7 @@ VMware Introduction?
 
 Charlie Sheen
 
-![alt text](https://media3.giphy.com/media/3ohryhNgUwwZyxgktq/giphy.gif?cid=790b761199f09f01623c83c3a6c9363d6773e8dc0c0c7d0c&rid=giphy.gif&ct=g)
+![alt text](./winning.gif)
 # Staying Current
 ### News
 
@@ -65,7 +65,7 @@ Charlie Sheen
 
 ### Podcasts
 
-[![Darknet Diaries](https://podnews.net/r/t/198/8766-1e53e416.jpeg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5) [![Malicious Life](https://www.esecurityplanet.com/wp-content/uploads/2021/04/Malicious-Life-logo-150x150.png)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q) [![The Cyberwire](https://www.esecurityplanet.com/wp-content/uploads/2021/04/cyberwire-daily-logo-150x150.jpeg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe) [![Security Now](https://efsnm.files.wordpress.com/2016/07/securitynow.jpeg)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
+[![Darknet Diaries](./darknet.jpeg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5) [![Malicious Life](./malicious.png)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q) [![The Cyberwire](./cyberwire.jpeg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe) [![Security Now](./securitynow.jpeg)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
 
 ### Ongoing Learning
 

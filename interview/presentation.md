@@ -57,7 +57,7 @@ VMware Introduction?
 Charlie Sheen
 
 
-![alt text](https://www.memesmonkey.com/images/memesmonkey/d0/d0372051a4a093b4bbd96b816934866c.jpeg)
+![alt text](https://media3.giphy.com/media/3ohryhNgUwwZyxgktq/giphy.gif?cid=790b761199f09f01623c83c3a6c9363d6773e8dc0c0c7d0c&rid=giphy.gif&ct=g)
 # Staying Current
 ### News
 

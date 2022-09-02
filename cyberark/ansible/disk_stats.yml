@@ -18,3 +18,17 @@
     vars:
       disk: '{{ ansible_facts.disks|selectattr("system_disk")|first }}'
       disksize_gib: '{{ (disk.size/1024|pow(3))|round|int }} GiB'
+
+  - name: 'Check free space in C:'
+    win_shell: 'Get-PSDrive C | Select-Object Free | ft -HideTableHeaders'
+    register: freespace
+
+  - block:
+      - debug:
+          msg: "Directory C: there is not free space enough. End of play."
+      - meta: end_play
+    when: freespace == '1500000000'
+
+  - debug:
+      msg: "Directory C: has free space enough. Continue play."
+      #10737418240

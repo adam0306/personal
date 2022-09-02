@@ -18,6 +18,6 @@
             OwnerName: "ansible_user"
         secret_management:
             automatic_management_enabled: true
-       state: present
+        state: present
         cyberark_session: "{{ cyberark_session }}"
       register: cyberarkaction

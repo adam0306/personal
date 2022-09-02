@@ -36,6 +36,4 @@
     - name: install aim
       yum:
         name: /var/opt/aim/CARKaim-11.02.0.22.x86_64.rpm
-        state: present
-
-#TODO: add logic to verify agent is uninstalled
+        state: latest

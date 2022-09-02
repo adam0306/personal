@@ -2,6 +2,7 @@
 - name: Ansible Find Example
   hosts: all
   tasks:
+
    - name : Find files older than 180 days
      become: yes
      find:

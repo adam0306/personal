@@ -20,15 +20,49 @@
 ![alt text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.gfycat.com%2FUnpleasantWaterloggedHydra-mobile.jpg&f=1&nofb=1)
 
 ![alt text](https://www.meme-arsenal.com/memes/c248427c8436b4985ccfdc5d67cd6909.jpg)
-Everything is fine. https://www.meme-arsenal.com/memes/c248427c8436b4985ccfdc5d67cd6909.jpg
-<!-- ##
 
-When you won
+### When you win
+![alt text](https://www.memesmonkey.com/images/memesmonkey/d0/d0372051a4a093b4bbd96b816934866c.jpeg)
+# Stay Current
+
+### News
+
+* [The Hacker News](https://thehackernews.com/ "The Hacker News")
+* [Dark Reading](https://www.darkreading.com/ "Dark Reading")
+* [Security Week](https://www.securityweek.com/ "Security Week")
+* [Bleeping Computer](https://www.bleepingcomputer.com/ "Bleeping Computer")
+
+
+
+#### Reading
+#### Podcasts
+
+[![Image name](https://media1.popsugar-assets.com/files/thumbor/6QuHJxTvZVaIohb6eycUg9wfRWw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/10/20/766/n/47856405/99d3b8d29bfe0351_Darknet_Diaries/i/Darknet-Diaries.jpg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5)
+
+[![Image name](https://malicious.life/wp-content/uploads/2022/04/Apple-profile-400x400_.jpg)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q)
+
+[![Image name](https://thecyberwire.com/images/cover-art/daily-podcast-cover-art-cw-368.jpg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe)
+
+[![Image name](https://elroy.twit.tv/sites/default/files/styles/twit_album_art_600x600/public/images/shows/security_now/album_art/sn2022_albumart_standard_2048.jpg?itok=7NzFowe1)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
+
+
+
+
+
+
+
+
+
+<!-- Everything is fine. https://www.meme-arsenal.com/memes/c248427c8436b4985ccfdc5d67cd6909.jpg
+
+
 
 5. Describe your experience implementing new solutions/ collaborating with other teams /lifecycle
 management/ system support/ etc...
 
 interests
+<p style="text-align: center;">A piece of centered text</p>
+
 
 https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5
 

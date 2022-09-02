@@ -8,17 +8,20 @@
 * Into all things secrets and U2F :heart: Yubico :heart:
 
 
+# Background
+## Education
 
+## Experience
 
-Education
+## Skills
 
-Background
+## You Have Failed
 
-Experience
+![alt text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.gfycat.com%2FUnpleasantWaterloggedHydra-mobile.jpg&f=1&nofb=1)
 
-Skills
-
-When you failed
+![alt text](https://www.meme-arsenal.com/memes/c248427c8436b4985ccfdc5d67cd6909.jpg)
+Everything is fine. https://www.meme-arsenal.com/memes/c248427c8436b4985ccfdc5d67cd6909.jpg
+<!-- ##
 
 When you won
 
@@ -26,6 +29,28 @@ When you won
 management/ system support/ etc...
 
 interests
+
+https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5
+
+https://media1.popsugar-assets.com/files/thumbor/6QuHJxTvZVaIohb6eycUg9wfRWw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/10/20/766/n/47856405/99d3b8d29bfe0351_Darknet_Diaries/i/Darknet-Diaries.jpg
+
+
+https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q
+https://malicious.life/wp-content/uploads/2022/04/Apple-profile-400x400_.jpg
+
+
+https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe
+https://thecyberwire.com/images/cover-art/daily-podcast-cover-art-cw-368.jpg
+
+
+
+## News
+
+* The Hacker NewsCurrently trying out Kubernetes with [Linode](https://www.linode.com/?r=4dffecc5dd019bc812987b595ce20e6322efea2d "Linode")
+https://thehackernews.com/
+https://www.darkreading.com/
+https://www.securityweek.com/
+https://www.bleepingcomputer.com/
 
 
 
@@ -58,4 +83,4 @@ Winning.    https://www.memesmonkey.com/images/memesmonkey/d0/d0372051a4a093b4bb
 - [ ] Kubernetes
 - [ ] Bloodhound
 - [ ] CTFs on Tryhackme
-- [ ] Kali
+- [ ] Kali -->

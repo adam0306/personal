@@ -72,13 +72,6 @@ Charlie Sheen
 
 [![Darknet Diaries](https://podnews.net/r/t/198/8766-1e53e416.jpeg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5) [![Malicious Life](https://www.esecurityplanet.com/wp-content/uploads/2021/04/Malicious-Life-logo-150x150.png)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q) [![The Cyberwire](https://www.esecurityplanet.com/wp-content/uploads/2021/04/cyberwire-daily-logo-150x150.jpeg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe) [![Security Now](https://efsnm.files.wordpress.com/2016/07/securitynow.jpeg)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
 
-[![Malicious Life](https://www.esecurityplanet.com/wp-content/uploads/2021/04/Malicious-Life-logo-150x150.png)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q)
-
-[![The Cyberwire](https://www.esecurityplanet.com/wp-content/uploads/2021/04/cyberwire-daily-logo-150x150.jpeg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe)
-
-[![Security Now](https://efsnm.files.wordpress.com/2016/07/securitynow.jpeg)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
-
-
 ### Ongoing Learning
 
 ### Programming Languages

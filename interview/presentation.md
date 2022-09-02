@@ -72,11 +72,11 @@ Charlie Sheen
 
 [![Darknet Diaries](https://podnews.net/r/t/198/8766-1e53e416.jpeg)](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5)
 
-[![Malicious Life](https://malicious.life/wp-content/uploads/2022/04/Apple-profile-400x400_.jpg)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q)
+[![Malicious Life](https://www.esecurityplanet.com/wp-content/uploads/2021/04/Malicious-Life-logo-150x150.png)](https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q)
 
-[![The Cyberwire](https://thecyberwire.com/images/cover-art/daily-podcast-cover-art-cw-368.jpg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe)
+[![The Cyberwire](https://www.esecurityplanet.com/wp-content/uploads/2021/04/cyberwire-daily-logo-150x150.jpeg)](https://open.spotify.com/show/0CnYnxrAcfRjh0YSQINAwe)
 
-[![Security Now](https://elroy.twit.tv/sites/default/files/styles/twit_album_art_600x600/public/images/shows/security_now/album_art/sn2022_albumart_standard_2048.jpg?itok=7NzFowe1)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
+[![Security Now](https://efsnm.files.wordpress.com/2016/07/securitynow.jpeg)](https://open.spotify.com/show/7vAbYigR3zs8GYJP3EoVWw)
 
 
 ### Ongoing Learning

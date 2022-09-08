@@ -70,9 +70,8 @@
 ## Learning Topics
 * Currently trying out Kubernetes with [Linode](https://www.linode.com/?r=4dffecc5dd019bc812987b595ce20e6322efea2d "Linode")
 
-- [ ] Python
+- [x] Python
 - [x] PowerShell
 - [ ] Golang
-- [ ] Docker
+- [x] Docker
 - [ ] Kubernetes
-- [ ] CTFs on Tryhackme

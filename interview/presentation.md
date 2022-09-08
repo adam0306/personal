@@ -1,24 +1,3 @@
-<!-- 
-Update Skills section
-Update Win section
-Update Failure section
--->
-# Presentation Conundrum
-
-- Markdown
-    - Refreshing method but what if they're specifically looking for PowerPoint? Worth the risk?
-- Docker Container
-    - With the audience being primarily security people, I doubt many would be willing to run a random docker container on a machine.
-- Video
-    - Interesting method but sourcing content could be difficult and no real way to speak to content directly during playback.
-- Standard Boiler Plate PowerPoint
-    - The driest, cookie cutter method but C level like them.
-
-<!-- 
-5. Describe your experience implementing new solutions/ collaborating with other teams /lifecycle
-management/ system support/ etc...
- -->
-
 # Background
 ### Education
 
@@ -29,58 +8,45 @@ management/ system support/ etc...
 ### Experience (Chronologically)
 
 * General Dynamics Information Technology
-    * Systems Administrator for two office locations
+    * Systems Administrator for two locations.
     * It was a general understanding that if the item had wires within it, I worked on it
-    * VMware Virtualization, Linux Administration (RedHat and Ubuntu), Network Administration, Facilities Management, and Asset Management
 * Lockheed Martin
     * I had the opportunity to work on fighter jets while living at the beach. Enough said
 * SouthernLinc Wireless
-    * Work with teams across the organization in implementation, knowledge transfer, and support of security tools
-    * Member of Windows/Linux/VMware admin team supporting the LTE project
+    * Supported the implementation of the LTE project.
 * Warren Averett
-    * Assigned a group of clients to support and build relationships with
-    * Help design 
-    * Implementation of Firewalls and network devices
+    * Supported assigned customers and cultivated those relationships.
     * Mentor junior colleagues 
 * Blue Cross & Blue Shield of Alabama
-    * Lead CyberArk Vault Admin
+    * Lead CyberArk Administrator along with automation of everything possible.
     * Educate other teams on automation tools and techniques utilizing CyberArk
     * Serve as a problem solver to devise solutions to problems within the organization
 
 ### Skills
 
-* VMware
-* CyberArk
-* Linux
-* Active Directory
-* Backups (Veeam NetBackup)
-* Palo Alto Firewalls
-* Ubiquiti
-* Lancope/Stealthwatch
-* Vuln management (McAfee/Intel Foundstone)
-* Constant networking
-* Sys Admin
-* Windows
-* Rewriting PSM Monitor tool from Python using Docker into Golang https://github.com/adam0306/PSM-Monitor
-* PowerShell/PowerCLI
-* Virtualization
-* Storage
-* Security Tool Implementation
-* RestAPI
-* Ansible Tower
+* Virtualization Administration
+* Linux Administration
+* Windows Administration
+* CyberArk Administration
+* Network Administration
+* Security Engineer
+* Automation
+* Networking with people
 
+### A Story of Two Switches Not Connecting.
 
-### You Have Failed
-
-Port Channel
+* Will they ever connect?
+* What was wrong?
+* What did I learn from this mistake?
 
 ![alt text](./everything.gif)
 
-### When you win
+### Two Servers on One Piece of Hardware
 
-VMware Introduction?
-
-Charlie Sheen
+* How will the future look?
+* Saved costs?
+* Faster time to operation.
+* Looking ahead what happened?
 
 ![alt text](./winning.gif)
 # Staying Current
@@ -110,10 +76,3 @@ Charlie Sheen
 - [ ] Docker
 - [ ] Kubernetes
 - [ ] CTFs on Tryhackme
-
-### Human Languages
-
-| Language | Learning Status |     Fluency      |
-|----------|-----------------|------------------|
-| Spanish  | In Progress     |    Elementary    |
-| Persian  | In Progress     |  No Proficiency  |

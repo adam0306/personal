@@ -1,7 +1,7 @@
 FROM alpine:latest
-COPY ./list.txt .
 RUN apk update && apk upgrade && \
-apk add python3 py3-pip wget curl ffmpeg && \
+apk add python3 py3-pip wget curl ffmpeg git && \
+wget https://raw.githubusercontent.com/adam0306/personal/master/youtube/archive.txt && \
 curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && \
 chmod a+rx /usr/local/bin/yt-dlp
-#CMD ["/usr/local/bin/yt-dlp --format 'bv*+ba/b' --download-archive archive.txt -a list.txt"]
+CMD ["yt-dlp --download-archive archive.txt -S ext:mp4:m4a"]

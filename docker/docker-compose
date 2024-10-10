@@ -1,160 +1,117 @@
 ---
-version: "2.1"
+version: "2.3"
 services:
+  emby:
+    image: emby/embyserver
+    container_name: embyserver
+    environment:
+      - UID=1000
+      - GID=1000
+    volumes:
+      - /home/adam/config/emby/:/config
+      - /mnt/movies/:/mnt/movies
+      - /mnt/shows/:/mnt/shows
+    ports:
+      - 8096:8096
+    devices:
+      - /dev/dri:/dev/dri
+    restart: unless-stopped
+  embystat:
+    image: lscr.io/linuxserver/embystat:latest
+    container_name: embystat
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/CST
+    volumes:
+      - /home/adam/config/embystat/:/config
+    ports:
+      - 6555:6555
+    restart: unless-stopped
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
+      - PUID=0
+      - PGID=0
+      - TZ=Etc/CST
     volumes:
-      - /path/to/data:/config
+      - /home/adam/config/prowlarr:/config
     ports:
       - 9696:9696
     restart: unless-stopped
-
-
----
-version: "2.1"
-services:
   sonarr:
-    image: lscr.io/linuxserver/sonarr:latest
+    image: linuxserver/sonarr:4.0.1
     container_name: sonarr
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /path/to/data:/config
-      - /path/to/tvseries:/tv #optional
-      - /path/to/downloadclient-downloads:/downloads #optional
-    ports:
-      - 8989:8989
     restart: unless-stopped
-
----
-version: "2"
-services:
-  readarr:
-    image: linuxserver/readarr:0.2.0-nightly
-    container_name: readarr
-    restart: no
-
-
-
----
-version: "2.1"
-services:
-  radarr:
-    image: lscr.io/linuxserver/radarr:latest
-    container_name: radarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Etc/CST
+      - PUID=0
+      - PGID=0
     volumes:
-      - /path/to/data:/config
-      - /path/to/movies:/movies #optional
-      - /path/to/downloadclient-downloads:/downloads #optional
+      - /mnt/shows:/data
+      - /home/adam/config/sonarr:/config
+      - /mnt/config/transmission/downloads:/downloads
     ports:
-      - 7878:7878
-    restart: unless-stopped
-
-
-
-
----
-version: "2.1"
-services:
-  emby:
-    image: lscr.io/linuxserver/emby:latest
-    container_name: emby
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /path/to/library:/config
-      - /path/to/tvshows:/data/tvshows
-      - /path/to/movies:/data/movies
-      - /opt/vc/lib:/opt/vc/lib #optional
-    ports:
-      - 8096:8096
-      - 8920:8920 #optional
-    devices:
-      - /dev/dri:/dev/dri #optional
-      - /dev/vchiq:/dev/vchiq #optional
-      - /dev/video10:/dev/video10 #optional
-      - /dev/video11:/dev/video11 #optional
-      - /dev/video12:/dev/video12 #optional
-    restart: unless-stopped
-
-
-
-
-
----
-version: "2.1"
-services:
+      - 8989:8989/tcp
   readarr:
     image: lscr.io/linuxserver/readarr:develop
     container_name: readarr
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=ETC/CST
     volumes:
-      - /path/to/data:/config
-      - /path/to/books:/books #optional
-      - /path/to/downloadclient-downloads:/downloads #optional
+      - /home/adam/config/readarr:/config
+      - /mnt/books:/books #optional
+      - /mnt/config/transmission/downloads::/downloads #optional
     ports:
       - 8787:8787
     restart: unless-stopped
-
-
-
-
-
----
-version: "2.1"
-services:
-  jackett:
-    image: lscr.io/linuxserver/jackett:latest
-    container_name: jackett
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - AUTO_UPDATE=true #optional
-      - RUN_OPTS= #optional
-    volumes:
-      - /path/to/data:/config
-      - /path/to/blackhole:/downloads
-    ports:
-      - 9117:9117
+  radarr:
+    image: linuxserver/radarr:5.2.6
+    container_name: radarr
     restart: unless-stopped
-
-
-
-
----
-version: "2.1"
-services:
-  ubooquity:
-    image: lscr.io/linuxserver/ubooquity:latest
-    container_name: ubooquity
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - MAXMEM=
+      - TZ=Etc/CST
+      - PUID=0
+      - PGID=0
     volumes:
-      - /path/to/data:/config
-      - /path/to/books:/books
-      - /path/to/comics:/comics
-      - /path/to/raw/files:/files
+      - /mnt/movies:/movies
+      - /mnt/config/transmission/downloads:/downloads
+      - /home/adam/config/radarr:/config
     ports:
-      - 2202:2202
-      - 2203:2203
+      - 7878:7878/tcp
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Etc/CST
+    volumes:
+      - /home/adam/config/transmission:/config
+      - /mnt/config/transmission/downloads:/downloads
+      - /mnt/config/transmission/watch/folder:/watch
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
     restart: unless-stopped
+  semaphore:
+    ports:
+      - 3000:3000
+    image: semaphoreui/semaphore:latest
+    environment:
+      SEMAPHORE_DB_DIALECT: bolt
+      SEMAPHORE_ADMIN_PASSWORD: changeme
+      SEMAPHORE_ADMIN_NAME: admin
+      SEMAPHORE_ADMIN_EMAIL: admin@localhost
+      SEMAPHORE_ADMIN: admin
+  # ntopng:
+  #   image: ntop/ntopng:stable
+  #   restart: always
+  #   network_mode: "host"
+  #   volumes:
+  #     - /etc/ntopng.license:/etc/ntopng.license:ro
+  #   command: ['--interface', 'tcp://*:5556c', '-F', 'clickhouse', '--disable-login'] # , '--insecure']

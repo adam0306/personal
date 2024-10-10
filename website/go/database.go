@@ -14,9 +14,6 @@ db, err := sql.Open("mysql", "username:password@(127.0.0.1:3306)/dbname?parseTim
 err := db.Ping()
 
 
-
-
-
 # Query
 
 query := `
@@ -31,8 +28,6 @@ query := `
 // Executes the SQL query in our database. Check err to ensure there was no error.
 _, err := db.Exec(query)
 
-
-
 # New row
 
 
@@ -45,8 +40,6 @@ createdAt := time.Now()
 // Inserts our data into the users table and returns with the result and a possible error.
 // The result contains information about the last inserted id (which was auto-generated for us) and the count of rows this query affected.
 result, err := db.Exec(`INSERT INTO users (username, password, created_at) VALUES (?, ?, ?)`, username, password, createdAt)
-
-
 
 
 # Find all users
@@ -68,23 +61,6 @@ for rows.Next() {
     users = append(users, u)
 }
 err := rows.Err() // check err
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 package main

@@ -1,0 +1,17 @@
+
+
+
+
+- name: Get stats from JSON API 
+  uri:
+    url: https://myapi.com/stats
+    return_content: yes 
+  register: result
+
+- debug:
+    msg: "Current temp is: {{ result.json | json_query(‘temp‘)}}"
+
+
+
+    when: 
+  organizations[0].divisions|json_query(‘[*].teams[*].name‘) == ‘Storage‘

@@ -1,0 +1,37 @@
+---
+- name: Setting Up A New Mac
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Installing Homebrew
+      ansible.builtin.shell: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+
+    - name: Upgrades all installed Mac App Store apps
+      community.general.mas:
+        upgrade_all: true
+
+    - name: Installs Required Casks
+      community.general.homebrew_cask:
+        name:
+        - tailscale-app
+        - bitwarden
+        - firefox
+        - signal
+        - discord
+        - libreoffice
+        - spotify
+        - docker-desktop
+        - obsidian
+        - visual-studio-code
+        - emby
+        - proton-mail
+        - yubico-authenticator
+        - docker
+        - docker-compose
+        - docker-completion
+        - tailscale
+        state: present
+
+
+
+# brew install --cask netbirdio/tap/netbird-ui
